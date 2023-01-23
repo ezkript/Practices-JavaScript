@@ -1,0 +1,368 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ----------------------------------- Header -------------------------- */
+
+html {
+    scroll-behavior: smooth;
+    overflow-x:hidden;
+}
+
+body {
+    transition: all 0.2s ease-out;
+    
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: gold;
+    height: 8vh;
+    width: 100%;
+    z-index: 997;
+}
+
+.sections {
+    display:flex;
+    align-items: center;
+    flex-direction:column;
+}
+
+.section {
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+    padding-top:4rem;
+    min-width: 1200px;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.header-title {
+    font-size: 40px;
+    color: #444;
+    font-weight: bold;
+}
+
+.section-title {
+    font-size:35px;
+    font-weight: bold;
+    padding-bottom:20px;
+}
+
+.hamburger-menu {
+    display: flex;
+    justify-content: center;
+    position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:gold;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+    z-index: 999;
+}
+
+.menu-container {
+    display: flex;
+    position: fixed;
+    bottom:0;
+    right:200%;
+    background-color: #000E;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    z-index: 998;
+}
+
+.visible {
+    right:0;
+}
+
+.menu-list a {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: gold;
+    height: 50px;
+    width: 100vw;
+    transition: 0.2s;
+}   
+.menu-list{
+    display:flex;
+    flex-direction: column;
+    list-style: none;
+    font-size: 30px;
+}
+
+.menu-list a:hover {
+    background-color: gold;
+    color:#000;
+}
+
+#date {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#background {
+    width: 90vw;
+    height: 50vh;
+    background-color: #222;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+#ball {
+    position:relative;
+    height: 60px;
+    width: 60px;
+    background-color: gold;
+    border-radius: 50px;
+    transition:0.1s;
+}
+
+.mainText {
+    font-size: 30px;
+}
+
+.scrollTop {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:120px;
+	background-color:gold;
+	color:#FFF;
+	border-radius:50px;
+	box-shadow: 2px 2px 3px #999;
+    z-index: 999;
+    border:0px;
+    color:#000;
+    font-size: 40px;
+    transition: 0.2s;
+}
+
+.scrollTop:hover{
+    cursor:pointer;
+    color:#444;
+}
+
+.darkMode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	left:40px;
+	background-color:gold;
+	color:#FFF;
+	border-radius:50px;
+	box-shadow: 2px 2px 3px #999;
+    z-index: 999;
+    border:0px;
+    color:#000;
+    font-size: 40px;
+    cursor:pointer;
+    transition: all 0.2s ease-out;
+}
+
+.activeDarkMode {
+    background:#444;
+    color:gold;
+}
+
+.darkMode:hover {
+    background-color: #444;
+    box-shadow: 2px 2px 3px gold;
+}
+
+.responsive-content {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:4rem;
+    margin-top:4rem;
+}
+
+.responsive-content a {
+    color:#000;
+    font-size:30px;
+    text-decoration: none;
+    padding: 1rem;
+    background-color: gold;
+    border-radius:10px;
+}
+
+#form {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin:0.5rem;
+    gap:0.5rem;
+}
+
+.input_field{
+    outline:none;
+    font-size: 20px;
+    border:10px;
+    padding: 2px;
+    border-left:5px #ffd700 solid;
+    background-color: #ffd700AA;
+    border-radius: 0 5px 5px 0;
+    color:#000;
+}
+.input_field::placeholder{
+    color:#FFFA;
+}
+
+.btn {
+    color:#000;
+    font-size:20px;
+    text-decoration: none;
+    height: 30px;
+    width: 100px;
+    background-color: gold;
+    border-radius:10px;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    transition: all 0.2s ease;
+}
+.btn:hover {
+    height: 35px;
+    width: 105px;
+}
+
+#connectionStatus {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    padding: 1rem 0 1rem 0;
+    position: fixed;
+    top:0;
+    right: 0;
+    z-index: 1000;
+    transform: translate(0px, -100px);
+    transition: all 1s ease;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#device-status {
+    font-size: 30px;
+}
+#device-status i {
+    font-style: none;
+}
+
+.img-container {
+    display:flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top:3rem;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+
+.img_desc {
+    padding:0.5rem;
+    font-size:24px;
+}
+
+.img-description {
+    background:gold;
+    color:#000;
+}
+
+
+#lottery-list {
+    list-style: none;
+    margin-bottom:2rem;
+    font-weight: bold;
+}
+
+.lottery-button{
+    height: auto;
+}
+
+.lottery-button:hover{
+    height: 50px;
+}
+
+.wrapper {
+    display:flex;
+    height: 80vh;
+    width: 38vw;
+    border-radius:5%;
+    overflow:hidden;
+    align-items: center;
+}
+
+.content-slider {
+    min-height: 80vh;
+    min-width: 38vw;
+    transition: all 0.2s ease;
+    padding:1rem;
+}
+
+.content-slider:nth-child(2){
+    background-image: url("https://placeimg.com/600/600/people");
+    background-position: center;
+    object-fit:cover;
+    background-size: cover;
+}
+
+.slider-button{
+    position:absolute;
+    color:#000;
+    font-size:30px;
+    height: 40px;
+    width: 40px;
+    border:none;
+    background-color: #ffd700;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor:pointer;
+    transition: all 0.2s ease;
+    z-index:900;
+}
+
+.slider-button:hover {
+    color: gray;
+}
+
+.left {
+    transform: translate(8px,0);
+}
+
+.right {
+    transform: translate(calc(38vw - 50px),0);
+}
