@@ -12,6 +12,8 @@ import location from "./location.js";
 import searchFilter from "./search_filter.js";
 import lottery from "./lottery.js";
 import slider from "./slider.js";
+import scrollSpy from "./ScrollSpy.js";
+
 document.addEventListener("DOMContentLoaded", (e)=>{
   hamburgerF(".hamburger-menu", ".menu-container", ".hamburger", ".menu-list li a");
   clock(".timerStart", ".timerStop", ".alarmStart", ".alarmStop");
@@ -33,7 +35,8 @@ document.addEventListener("DOMContentLoaded", (e)=>{
   location(".show-location");
   searchFilter("search_input");
   lottery(".lottery-competitor", ".lottery-button");
-  slider(".left",".right",".content-slider");
+  slider(".right",".left",".content-slider");
+  scrollSpy(".section-title", ".menu-item");
 });
 
 darkMode(".darkMode", "body");

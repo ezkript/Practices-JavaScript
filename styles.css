@@ -90,7 +90,7 @@ body {
     right:0;
 }
 
-.menu-list a {
+.menu-link {
     display:flex;
     align-items: center;
     justify-content: center;
@@ -107,7 +107,7 @@ body {
     font-size: 30px;
 }
 
-.menu-list a:hover {
+.menu-link:hover {
     background-color: gold;
     color:#000;
 }
@@ -118,10 +118,10 @@ body {
 }
 
 #background {
-    width: 90vw;
+    display:flex;
+    width: 50vw;
     height: 50vh;
     background-color: #222;
-    display:flex;
     justify-content: center;
     align-items:center;
 }
@@ -285,6 +285,8 @@ body {
 
 .img-container {
     display:flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
     gap: 1rem;
     margin-top:3rem;
@@ -365,4 +367,50 @@ body {
 
 .right {
     transform: translate(calc(38vw - 50px),0);
+}
+
+@media (min-width: 1200px) {
+
+    .content {
+        display:flex;
+        flex-direction: row;
+    }
+    .sections {
+        width: 78vw;
+    }
+
+    .menu-container {
+        display: flex;
+        position: fixed;
+        bottom:0;
+        right:0;
+        background-color: #0009;
+        height: 100vh;
+        width: 20vw;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s ease;
+        z-index: 996;
+        overflow-wrap: break-word;
+    }
+
+    .menu-list a{
+        font-size: 20px;
+        text-align: center;
+        width: 20vw;
+    }
+
+    .hamburger-menu {
+        display:none;
+    }
+
+    .scrollTop {
+        right:0;
+        left:120px;
+    }
+
+    .spy {
+        background:gold;
+        color:#000;
+    }
 }
