@@ -13,6 +13,7 @@ import searchFilter from "./search_filter.js";
 import lottery from "./lottery.js";
 import slider from "./slider.js";
 import scrollSpy from "./ScrollSpy.js";
+import smartVideo from "./SmartVideo.js";
 
 document.addEventListener("DOMContentLoaded", (e)=>{
   hamburgerF(".hamburger-menu", ".menu-container", ".hamburger", ".menu-list li a");
@@ -37,6 +38,7 @@ document.addEventListener("DOMContentLoaded", (e)=>{
   lottery(".lottery-competitor", ".lottery-button");
   slider(".right",".left",".content-slider");
   scrollSpy(".section-title", ".menu-item");
+  smartVideo('.smart-video');
 });
 
 darkMode(".darkMode", "body");

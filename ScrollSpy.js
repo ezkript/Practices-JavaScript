@@ -4,7 +4,7 @@ export default function scrollSpy(items, menuItem){
     const list = d.querySelectorAll(items);
     const menuItems=d.querySelectorAll(menuItem);
     const options = {
-            root:d.querySelector(".container"),
+            // root:d.querySelector(".container"),
             threshold:1.0,
     }
     const observer = new IntersectionObserver((entry)=>{
