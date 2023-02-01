@@ -1,8 +1,8 @@
-const d=document;
+const d=document,
+    w=window;
 
 export default function smartVideo(video){
     const $video=d.querySelector(video);
-    let visib;
     const options = {
             threshold:0.50,
     }
@@ -10,20 +10,19 @@ export default function smartVideo(video){
         entry.forEach((e)=>{
            if(e.isIntersecting){
                 $video.play();
-                visib=true;
            } else {
                 $video.pause();
-                visib=false;
            }
+           
+           w.addEventListener('visibilitychange', (e)=>{
+               if(d.visibilityState==='visible'){
+                   $video.play();
+               } else if(d.visibilityState==='hidden'){
+                   $video.pause();
+               }
+           });
         });
     },options);
 
     observer.observe($video);
-    d.addEventListener('visibilitychange', (e)=>{
-        if(d.visibilityState==='visible' && visib){
-            $video.play();
-        } else if(d.visibilityState==='hidden'){
-            $video.pause();
-        }
-    })
 }
